@@ -27,7 +27,6 @@ namespace TechJobsConsole
             // Allow user to search/list until they manually quit with ctrl+c
             while (true)
             {
-
                 string actionChoice = GetUserSelection("View Jobs", actionChoices);
 
                 if (actionChoice.Equals("list"))
@@ -92,7 +91,6 @@ namespace TechJobsConsole
                     {
                         Console.WriteLine("Please enter a keyword to search!");
                     }
-
                 }
             }
         }
@@ -147,19 +145,15 @@ namespace TechJobsConsole
             {
                 columnHeaders.Add(item.Key);
             }           
-
             
             foreach (Dictionary<string, string> row in someJobs)
             {
                 Console.WriteLine("*****");
                 for (int i = 0; i < columnHeaders.Count; i++)
-                {
-                    
-                    Console.WriteLine(columnHeaders[i] + ": " + row[columnHeaders[i]]);
-                    
+                {                    
+                    Console.WriteLine(columnHeaders[i] + ": " + row[columnHeaders[i]]);                   
                 }
                 Console.WriteLine("*****\n");
-
             }
         }
     }
